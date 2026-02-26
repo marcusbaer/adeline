@@ -1,0 +1,51 @@
+{
+  "name": "adeline",
+  "version": "0.0.1",
+  "description": "CLI based agents runner",
+  "keywords": [
+    "cli",
+    "llm",
+    "ollama",
+    "agent",
+    "multi agent",
+    "chat",
+    "mcp"
+  ],
+  "type": "module",
+  "bin": {
+    "ade": "./build/index.js",
+    "adeline": "./build/index.js"
+  },
+  "engines": {
+    "node": ">=21"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx -w src/index.ts"
+  },
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusbaer/adeline.git"
+  },
+  "author": "Marcus Baer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcusbaer/adeline/issues"
+  },
+  "homepage": "https://github.com/marcusbaer/adeline#readme",
+  "dependencies": {
+    "@openai/agents": "^0.4.15",
+    "commander": "^12.1.0",
+    "ollama": "^0.6.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.10",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
