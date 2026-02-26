@@ -22,7 +22,7 @@
   "scripts": {
     "build": "tsc && chmod 755 build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx -w src/index.ts"
+    "dev": "tsx watch src/index.ts"
   },
   "files": [
     "build"
