@@ -8,24 +8,26 @@
     "ollama",
     "agent",
     "multi agent",
-    "chat",
     "mcp"
   ],
   "type": "module",
   "bin": {
-    "ade": "./build/index.js",
-    "adeline": "./build/index.js"
+    "ade": "./dist/index.js",
+    "adeline": "./dist/index.js"
   },
   "engines": {
     "node": ">=21"
   },
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc && chmod 755 build/index.js",
+    "build": "tsc",
+    "cli": "tsx src/cli.ts",
+    "start": "DEBUG=false tsx src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/cli.ts"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -40,7 +42,8 @@
   "dependencies": {
     "@openai/agents": "^0.4.15",
     "commander": "^12.1.0",
-    "ollama": "^0.6.3",
+    "dotenv": "^17.3.1",
+    "gray-matter": "^4.0.3",
     "zod": "^4.3.6"
   },
   "devDependencies": {

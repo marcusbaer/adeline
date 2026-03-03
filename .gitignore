@@ -1,2 +1,12 @@
+dist/
 node_modules/
+shared/
+
 .env*
+*.json
+*.md
+
+!package.json
+!package-lock.json
+!tsconfig.json
+!README.md
